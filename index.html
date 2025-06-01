@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krono Novel | Website Baca Novel Gratis</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/kiranovel.jpg" type="image/x-icon" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/86258823cf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Section Navbar -->
+    <button id="toggle-navbar" class="toggle-navbar">☰</button>
+    <nav id="navbar" class="url">
+      <ul>
+        <li><a href="javascript:void(0);" data-id="home">Home</a></li>
+        <li><a href="javascript:void(0);" data-id="new">Daftar Novel</a></li>
+        <li><a href="javascript:void(0);" data-id="about">Tentang Kami</a></li>
+        <li><a href="feedback/index.html">Feedback</a></li>
+      </ul>
+    </nav>
+
+    <!-- End Section Navbar -->
+
+    <!-- Section Hero -->
+    <main>
+      <section id="home" class="hero">
+        <h2>Selamat Datang di Krono Novel</h2>
+        <p>Temukan dan baca novel favoritmu di sini</p>
+        <button onclick="scrollToSection('new')">Mulai Membaca</button>
+      </section>
+      <!-- End Section Hero -->
+
+      <!-- Section Menu Novel Terbaru -->
+      <h2 id="new">Daftar Novel</h2>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-title"
+          placeholder="Cari berdasarkan judul..."
+        />
+        <select id="search-genre">
+          <option value="">Semua Genre</option>
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Ecchi">Ecchi</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Harem">Harem</option>
+          <option value="Isekai">Isekai</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Romance">Romance</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Slice of Life">Slice of Life</option>
+          <!-- Tambahkan genre lainnya sesuai kebutuhan -->
+        </select>
+        <button onclick="filterNovels()">Cari</button>
+      </div>
+      <section id="latest" class="novel-list">
+        <article class="novel-item">
+          <img
+            src="img/journey.jpg"
+            alt="Journey of the Eternal: The Cultivator’s Ascension"
+          />
+          <div class="novel-content">
+            <h3>Journey of the Eternal: The Cultivator’s Ascension</h3>
+            <p>Status: Ongoing</p>
+            <p class="genre">
+              Genre: Adventure, Ecchi, Fantasy, Harem, Isekai, Romance
+            </p>
+            <button
+              class="read-now"
+              onclick="window.location.href='novel/journey-eternal.html'"
+            >
+              Detail Novel
+            </button>
+          </div>
+        </article>
+        <article class="novel-item">
+          <img src="img/echoes.jpg" alt="Echoes of the Abbys" />
+          <div class="novel-content">
+            <h3>Echoes of the Abbys</h3>
+            <p>Status: Ongoing</p>
+            <p class="genre">Genre: Mystery, Psychology</p>
+            <button
+              class="read-now"
+              onclick="window.location.href='novel/echoes-abbys.html'"
+            >
+              Detail Novel
+            </button>
+          </div>
+        </article>
+        <article class="novel-item">
+          <img src="img/ordinary.jpg" alt="A Symphony of Ordinary Days" />
+          <div class="novel-content">
+            <h3>A Symphony of Ordinary Days</h3>
+            <p>Status: Ongoing</p>
+            <p class="genre">Genre: Drama, Romance, Slice of Life</p>
+            <button
+              class="read-now"
+              onclick="window.location.href='novel/ordinary-days.html'"
+            >
+              Detail Novel
+            </button>
+          </div>
+        </article>
+        <article class="novel-item">
+          <img src="img/necro.jpg" alt="Only I Am a Necromancer" />
+          <div class="novel-content">
+            <h3>Only I Am a Necromancer</h3>
+            <p>Status: Ongoing</p>
+            <p class="genre">Genre: Action, Adventure, Fantasy</p>
+            <button
+              class="read-now"
+              onclick="window.location.href='novel/necromancer.html'"
+            >
+              Detail Novel
+            </button>
+          </div>
+        </article>
+        <article class="novel-item">
+          <img src="img/battle-v1.jpg" alt="Dungeon Battle Royale" />
+          <div class="novel-content">
+            <h3>Dungeon Battle Royale</h3>
+            <p>Status: Ongoing</p>
+            <p class="genre">
+              Genre: Action, Adventure, Comedy, Fantasy, Harem
+            </p>
+            <button
+              class="read-now"
+              onclick="window.location.href='novel/dungeon-battle.html'"
+            >
+              Detail Novel
+            </button>
+          </div>
+        </article>
+        <article class="novel-item">
+          <img src="img/netori.jpg" alt="Netori King: I Will NTR Everyone!" />
+          <div class="novel-content">
+            <h3>Netori King: I Will NTR Everyone!</h3>
+            <p>Status: Ongoing</p>
+            <p class="genre">Genre: Adventure, Ecchi, Fantasy, Harem</p>
+            <button
+              class="read-now"
+              onclick="window.location.href='novel/netori.html'"
+            >
+              Detail Novel
+            </button>
+          </div>
+        </article>
+        <!-- Tambahkan novel terbaru lainnya sesuai kebutuhan -->
+      </section>
+      <!-- End Section Novel terbaru -->
+
+      <!-- Section About/Tentang Kami -->
+      <section id="about" class="about">
+        <h2>Tentang Kami</h2>
+        <p>
+          Selamat datang di <strong>Krono Novel</strong>, platform inovatif yang
+          dirancang khusus untuk para penggemar novel di seluruh dunia. Nama
+          Krono Novel berasal dari gabungan kata "Krono," yang berarti waktu
+          (dari bahasa Yunani "chronos"), dan "Novel." Artinya, Krono Novel
+          dapat diartikan sebagai platform novel yang dapat menarik pembaca ke
+          dalam dunia membaca yang mendalam dan tak lekang oleh waktu. Kami
+          adalah tim yang berdedikasi untuk menyediakan pengalaman membaca novel
+          yang memuaskan, menyenangkan, dan mudah diakses.
+        </p>
+        <br />
+        <p>
+          <strong>Apa yang Kami Tawarkan</strong><br />
+          Di <strong>Krono Novel</strong>, kami menawarkan berbagai macam novel
+          dari berbagai genre, mulai dari Romance yang menyentuh hati, Fantasy
+          yang membawa Anda ke dunia ajaib, hingga Action dan Sci-Fi yang penuh
+          dengan petualangan dan imajinasi dan berbagai genre lainnya. Kami akan
+          berusaha untuk memastikan koleksi kami selalu diperbarui dengan
+          novel-novel terbaru dan terbaik.
+        </p>
+        <br />
+        <p>
+          <strong>Misi Kami</strong><br />
+          Misi kami adalah menjadi sumber utama bagi para pembaca untuk
+          menemukan dan menikmati novel favorit mereka. Kami percaya bahwa
+          setiap novel memiliki kekuatan untuk menginspirasi, menghibur, dan
+          memberikan perspektif baru. Dengan antarmuka yang ramah pengguna dan
+          fitur pencarian yang canggih, kami berkomitmen untuk memberikan
+          pengalaman membaca yang mudah dan menyenangkan.
+        </p>
+        <br />
+        <p>
+          <strong>Komunitas Pembaca</strong><br />
+          Kami juga berupaya untuk membangun komunitas pembaca yang aktif dan
+          terlibat. Melalui fitur ulasan dan rating, Anda dapat berbagi pendapat
+          dan rekomendasi dengan sesama pembaca. Kami juga menyediakan ruang
+          untuk diskusi dan interaksi tentang novel favorit Anda.
+        </p>
+        <br />
+        <p>
+          <strong>Hubungi Kami</strong><br />
+          Jika Anda memiliki pertanyaan, saran, request genre maupun novel, atau
+          ingin memberikan umpan balik, jangan ragu untuk menghubungi kami
+          melalui halaman
+          <strong
+            ><a href="feedback/index.html" class="garis">Feedback</a></strong
+          >. Kami sangat menghargai masukan Anda dan selalu berusaha untuk
+          meningkatkan layanan kami.
+        </p>
+        <br />
+        <p>
+          Terima kasih telah mengunjungi <strong>Krono Novel</strong>. Selamat
+          membaca dan semoga Anda menemukan banyak novel menarik dan
+          menginspirasi!
+        </p>
+        <br />
+      </section>
+      <!-- End Section About/Tentang Kami -->
+
+      <!-- Section Feedback -->
+      <section id="comments" class="comments">
+        <h2>Comment</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+          (function () {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://kirakennovel.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </section>
+      <!-- End Section Feedback -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Ikuti Social Media Kami</h2>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/profile.php?id=61551526770794&mibextid=ZbWKwL"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://x.com/0kiraken0?t=VMNZrdhhdvYMuvJmaRF6nQ&s=09"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/kir4.ken?igsh=MWZsamtmeTBlM2Zscg=="
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@_kiraken_?_t=8oVG48F6G8O&_r=1"
+            target="_blank"
+            class="social-icon"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          <a
+            href="https://discord.gg/8QH7XSEjFb"
+            target="_blank"
+            class="social-icon"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+        </div>
+        <div class="footer-bottom">
+          <p>Created By <a href="#">Krono Novel</a> | &copy; 2024</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Popup teks -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <h2>!Kata-Kata Hari Ini!</h2>
+        <hr />
+        <p>
+          "jika kata-kata mu bisa membuat mu bermahkota, lantas bagaimana dengan
+          sang pencipta yang menciptakan alam semesta tanpa mahkota di
+          kepalanya".
+        </p>
+        <hr />
+        <audio controls>
+          <source src="sound/music1.mp3" type="audio/mpeg" />
+          Your browser does not support the video tag.
+        </audio>
+      </div>
+    </div>
+    <!-- End Popup -->
+
+    <!-- Scroll-Up Button -->
+    <button id="scroll-up" class="scroll-up">
+      <img src="img/keqing.gif" alt="Scroll Up" />
+    </button>
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #8f0ce7; /* Warna utama berdasarkan karakter Keqing */
+  --secondary-color: #b19cd9; /* Warna sekunder */
+  --background-color: #ffffff; /* Warna latar belakang */
+  --text-color: #333; /* Warna teks */
+  --accent-color: #ffd700; /* Warna aksen */
+  --light-blue: #add8e6; /* Warna biru muda */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px; /* Menambahkan padding internal pada container agar ada ruang di semua sisi */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Tambahkan ini agar padding tidak menyebabkan elemen melewati lebar container */
+}
+
+/* Membuat tombol-tombol berjejer secara horizontal */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Menambahkan jarak antar tombol */
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  flex-grow: 1; /* Memastikan tombol memanjang sesuai lebar container */
+}
+
+button:hover {
+  background-color: #700bb3;
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmationMessage {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+  font-size: 18px;
+}

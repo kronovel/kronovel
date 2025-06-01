@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Feedback & Request Novel | Krono Novel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../img/kiranovel.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Krono Novel</h2>
+      </header>
+
+      <h1>Feedback / Request Novel</h1>
+      <form
+        id="feedbackForm"
+        action="https://formspree.io/f/xnnavazo"
+        method="POST"
+      >
+        <label for="name">Nama:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Masukkan Nama Anda"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Masukkan Email Anda dengan Benar"
+          required
+        />
+
+        <label for="feedback">Feedback atau Request Novel:</label>
+        <textarea
+          id="feedback"
+          name="message"
+          rows="5"
+          placeholder="Masukkan Pesan Feedback atau Request Novel Anda!"
+          required
+        ></textarea>
+
+        <label for="type">Tipe Pesan:</label>
+        <select id="type" name="type" required>
+          <option value="feedback">Feedback</option>
+          <option value="request">Request Novel</option>
+        </select>
+
+        <div class="button-container">
+          <button type="submit">Kirim</button>
+          <button type="button" onclick="history.back()">Kembali</button>
+        </div>
+      </form>
+
+      <div id="confirmationMessage" class="hidden">
+        Terima kasih atas masukan Anda!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

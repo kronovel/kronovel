@@ -1,0 +1,601 @@
+:root {
+  --primary-color: #8f0ce7; /* Warna utama berdasarkan karakter Keqing */
+  --secondary-color: #b19cd9; /* Warna sekunder */
+  --background-color: #ffffff; /* Warna latar belakang */
+  --text-color: #333; /* Warna teks */
+  --accent-color: #ffd700; /* Warna aksen */
+  --light-blue: #add8e6; /* Warna biru muda */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  cursor: url("../img/default.png"), auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.garis:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--text-color);
+}
+
+/* Additional CSS for Navbar Toggle */
+#navbar {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#navbar.show {
+  transform: translateY(0);
+}
+
+.toggle-navbar {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: url("../img/cursor.png"), auto;
+  z-index: 1001;
+}
+
+h2 {
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: url("../img/cursor.png"), auto;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.novel-list {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.novel-item {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(100% / 2 - 2rem);
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.novel-item img {
+  max-width: 100px;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+.novel-content {
+  flex: 1;
+}
+
+.novel-item:hover {
+  transform: scale(1.05);
+}
+
+.read-now {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: url("../img/cursor.png"), auto;
+  border-radius: 5rem;
+  transition: background-color 0.3s;
+}
+
+.read-now:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: url("../img/cursor.png"), auto;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.about {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--light-blue);
+  color: var(--text-color);
+  border-radius: 8px;
+  margin: 2rem 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.genre {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+/* Feedback Section */
+.feedback-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.feedback-section h2 {
+  color: #4a2a6e;
+  margin-bottom: 20px;
+}
+
+.feedback-section p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.feedback-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.feedback-form textarea {
+  height: 150px;
+}
+
+.feedback-form button {
+  padding: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 20px;
+  cursor: url("../img/cursor.png"), auto;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: var(--accent-color);
+}
+
+footer {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-social {
+  margin-bottom: 1rem;
+}
+
+.footer-social .social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-bottom .owner {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Scrollbar untuk seluruh halaman */
+::-webkit-scrollbar {
+  width: 12px; /* Lebar dari scrollbar */
+}
+
+/* Track dari scrollbar (area background dari scrollbar) */
+::-webkit-scrollbar-track {
+  background: var(
+    --background-color
+  ); /* Sesuaikan dengan background dari halaman */
+  border-radius: 10px; /* Membuat sudutnya bulat */
+}
+
+/* Gaya thumb (bagian yang bisa digerakkan dari scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Warna thumb scrollbar */
+  border-radius: 10px; /* Membuat sudutnya bulat */
+  border: 2px solid var(--background-color); /* Beri border agar terlihat lebih rapi */
+}
+
+/* Warna scrollbar saat di-hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color); /* Warna thumb saat di-hover */
+}
+
+/* Scrollbar untuk elemen spesifik, contoh untuk elemen dengan id #latest */
+#latest::-webkit-scrollbar {
+  width: 12px; /* Lebar scrollbar di dalam elemen ini */
+}
+
+#latest::-webkit-scrollbar-thumb {
+  background-color: var(
+    --secondary-color
+  ); /* Thumb scrollbar di dalam elemen ini */
+  border-radius: 10px;
+}
+
+/* Scroll-Up Button Styles */
+.scroll-up {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("../img/cursor.png"), auto;
+  transition: background-color 0.3s;
+  padding: 0; /* Remove padding to fit GIF */
+}
+
+.scroll-up img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Ensure the GIF fits within the circular button */
+}
+
+/* Style Popup */
+.popup {
+  display: none; /* Popup tidak terlihat secara default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  overflow: auto;
+}
+
+.popup-content {
+  text-align: center;
+  font-style: italic;
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(0); /* Inisialisasi dengan ukuran 0 (untuk animasi zoom) */
+  transition: transform 0.5s ease-in-out; /* Transisi untuk animasi zoom */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+audio {
+  width: 100%;
+  margin: 15px auto;
+}
+
+/* Tambahan untuk animasi zoom-in dan zoom-out */
+.popup.show .popup-content {
+  transform: scale(1); /* Zoom-in ke ukuran normal */
+}
+
+.popup.hide .popup-content {
+  transform: scale(0); /* Zoom-out ke ukuran 0 */
+}
+
+.comments {
+  padding: 2rem 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering Disqus container */
+#disqus_thread {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+/* Make iframe responsive */
+#disqus_thread iframe {
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toggle-navbar {
+    font-size: 1rem;
+  }
+
+  .novel-item {
+    width: calc(100% - 2rem);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .novel-item img {
+    margin-bottom: 1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    margin: 0.5rem 0;
+    width: 80%;
+  }
+
+  .genres .novel-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .genres .novel-item {
+    width: 80%;
+    text-align: center;
+  }
+
+  .feedback-section {
+    padding: 30px 15px;
+  }
+
+  .feedback-form {
+    max-width: 100%;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .feedback-form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .footer-links,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 0.5rem 0;
+  }
+
+  .footer-social {
+    flex-direction: row; /* Ubah arah menjadi baris */
+    justify-content: center; /* Ratakan ikon di tengah */
+    flex-wrap: wrap; /* Wrap the icons if they overflow */
+  }
+
+  .footer-social .social-icon {
+    margin: 0.5rem;
+  }
+
+  .popup-content {
+    width: 80%; /* Lebar popup disesuaikan untuk layar lebih kecil */
+    padding: 15px; /* Kurangi padding agar lebih pas */
+  }
+
+  .close {
+    font-size: 24px; /* Ukuran tombol close lebih kecil di layar mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup-content {
+    width: 90%; /* Lebar popup disesuaikan lebih besar untuk layar sangat kecil */
+    margin: 40% auto; /* Kurangi margin atas agar popup tidak terlalu ke bawah */
+    padding: 10px; /* Kurangi padding lebih jauh di layar sangat kecil */
+  }
+
+  .close {
+    font-size: 22px; /* Ukuran tombol close lebih kecil di layar yang lebih kecil */
+  }
+
+  h2 {
+    font-size: 18px; /* Sesuaikan ukuran teks heading agar lebih pas di layar kecil */
+  }
+
+  p {
+    font-size: 14px; /* Sesuaikan ukuran teks paragraf untuk layar kecil */
+  }
+}
